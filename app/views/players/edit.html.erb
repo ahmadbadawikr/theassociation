@@ -1,0 +1,17 @@
+<h1>Edit <%= @player.first_name%>'s information</h1>
+
+<form action="/players/<%= @player.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>
+        <label>First Name:</label>
+        <input type="text" name="player[first_name]" value="<%= @player.first_name %>">
+    </p>
+    <p>
+        <label>Last Name:</label>
+        <input type="text" name="player[last_name]" value="<%= @player.last_name %>">
+    </p>
+    <input type="submit" value="Update">
+</form>
+
+<a href="/players">Go Back</a>
