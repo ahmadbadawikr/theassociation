@@ -16,7 +16,7 @@
             <td><%= player.last_name%></td>
             <td><a href="/players/<%= player.id %>">Show Profile</a></td>
             <td><a href="/players/<%= player.id %>/edit">Edit Profile</a></td>
-
+            <td><a href="/players/<%= player.id %>" data-method="delete" data-confirm="Are you sure?">Delete Profile</a></td>
         </tr>
     <% end %>
     </tbody>
